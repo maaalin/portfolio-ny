@@ -30,7 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Insert footer
-  const footerHTML = `<p>&copy; 2025 Malin Bengtsson</p>`;
+  const footerHTML = `
+  
+  
+  
+  `;
   if (document.getElementById("footer-container")) {
     document.getElementById("footer-container").innerHTML = footerHTML;
   }
