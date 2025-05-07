@@ -36,57 +36,57 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Wait for navigation to be added before selecting elements
-  const sections = document.querySelectorAll("section:not(.intro)");
-  const menuLinks = document.querySelectorAll(".nav-link a");
+//   const sections = document.querySelectorAll("section:not(.intro)");
+//   const menuLinks = document.querySelectorAll(".nav-link a");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          menuLinks.forEach((link) => {
-            link.classList.toggle(
-              "active",
-              link.getAttribute("href").substring(1) === entry.target.id
-            );
-          });
-        }
-      });
-    },
-    { threshold: 0.6 }
-  );
+//   const observer = new IntersectionObserver(
+//     (entries) => {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//           menuLinks.forEach((link) => {
+//             link.classList.toggle(
+//               "active",
+//               link.getAttribute("href").substring(1) === entry.target.id
+//             );
+//           });
+//         }
+//       });
+//     },
+//     { threshold: 0.6 }
+//   );
 
-  sections.forEach((section) => observer.observe(section));
-});
-
-
+//   sections.forEach((section) => observer.observe(section));
+// });
 
 
-window.addEventListener("scroll", function () {
-  const header = document.querySelector(".banner-small"); // Select the header
-  if (window.scrollY > 250) {
-    header.classList.add("show"); // Add class when scrolled
-  } else {
-    header.classList.remove("show"); // Remove class when scrolled back up
-  }
-});
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, {
-  threshold: 0.5 // triggar när 50% av elementet syns
-});
 
-// Targeta den högra texten
-const rightText = document.querySelector('.slide-in-right');
-if (rightText) {
-  observer.observe(rightText);
-}
+// window.addEventListener("scroll", function () {
+//   const header = document.querySelector(".banner-small"); // Select the header
+//   if (window.scrollY > 250) {
+//     header.classList.add("show"); // Add class when scrolled
+//   } else {
+//     header.classList.remove("show"); // Remove class when scrolled back up
+//   }
+// });
 
-const leftText = document.querySelector('.slide-in-left');
-if (leftText) {
-  observer.observe(leftText);
-}
+// const observer = new IntersectionObserver(entries => {
+//   entries.forEach(entry => {
+//     if (entry.isIntersecting) {
+//       entry.target.classList.add('visible');
+//     }
+//   });
+// }, {
+//   threshold: 0.5 // triggar när 50% av elementet syns
+// });
+
+// // Targeta den högra texten
+// const rightText = document.querySelector('.slide-in-right');
+// if (rightText) {
+//   observer.observe(rightText);
+// }
+
+// const leftText = document.querySelector('.slide-in-left');
+// if (leftText) {
+//   observer.observe(leftText);
+// }

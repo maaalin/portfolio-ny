@@ -1,14 +1,33 @@
-
+/* --shell: #F8F4EB; */
 
 :root {
   --blue: #1F1BEE;
-  --shell: #F8F4EB;
+  --shell: #F2F2F2;
   --orange: #F5AE1F;
+  --brand-font-body: "area-normal", sans-serif;
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  background-color: var(--blue);
+  overflow-x: hidden
+}
+
+
+.light-bg {
+  background-color: var(--shell);
+}
+
 
 a {
   color: var(--orange);
@@ -36,54 +55,12 @@ a:hover {
   background-color: var(--orange)
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: var(--blue);
-  overflow-x: hidden
-}
-
-.banner {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  transition: all 0.3s ease-in-out;
-
-  top: 0;
-  left: 0;
-  margin-left: 50px;
-  width: 80%;
-  transition: all 0.6s ease-in-out;
-}
-
-
-.banner h1 {
-  font-size: 15em;
-  text-align: left;
-  margin-left: 20px;
-  margin-bottom: 0px;
-  line-height: 1em;
-  color: var(--shell);
-
-  font-family: "roc-grotesk", sans-serif;
-font-weight: 500;
-font-style: normal;
-
-
-}
-
-/* test */
 
 
 
 
 
 
-/* test */
 
 
 #media {
@@ -94,15 +71,6 @@ font-size: ;
 font-size: 0.9em;
 }
 
-.banner p {
-  position: absolute;
-  right: 0;
-  font-size: 3em;
-  text-align: left;
-  margin-right: 20px;
-  margin-bottom: 50px;
-  display: none;
-}
 
 .top-bar {
 
@@ -110,7 +78,7 @@ font-size: 0.9em;
  top: 0;
  right: 0;
  width: 100%;
- padding: 15px 16px;
+ padding: 15px 20px;
 
  z-index: 100;
 
@@ -122,15 +90,20 @@ font-size: 0.9em;
 
 }
 
+.light-bg .top-bar {
+  background-color: var(--shell);
+}
+
 nav ul {
-
   list-style: none;
-  font-size: 2em;
-  font-family: "roc-grotesk", sans-serif;;
-  color: var(--shell);
 
-  
-  
+}
+
+.nav-link {
+  font-size: 1.5em;
+  font-family: var(--brand-font-body), sans-serif;;
+  color: var(--shell);
+  padding-left: 20px;
 }
 
 nav ul li {
@@ -152,28 +125,20 @@ nav ul li a {
       
 }
 
-
-
-.banner-small {
-  color: var(--shell);
-  font-size: 1.5em;
-  font-family: "roc-grotesk", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-opacity: 0;
-transition: opacity .3s ease-in-out;
-width: 300px;
+.light-bg nav a {
+  color: var(--blue)
 }
 
-.banner-small-project {
-  color: var(--shell);
-  font-size: 1.5em;
-  font-family: "roc-grotesk", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  width: 300px;
+
+
+
+
+.banner-small, .banner-small-project {
+width: 500px;
 
 }
+
+
 
 .show {
   opacity: 100;
@@ -218,7 +183,7 @@ section {
 }
 
 .intro {
-  margin: 70px 50px;
+  margin: 300px 50px 100px 50px;
 }
 
 section h1 {
@@ -403,6 +368,9 @@ margin-bottom: 10px;
 
 
 
+
+
+
 .about h1 {
   /* color: black;
   margin-left: -10px;
@@ -547,28 +515,28 @@ margin-left: auto;
 /* project pages */
 .project-page {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 3rem;
   margin: 0;
   padding: 40px;
   margin: auto;
   margin-top: 80px;
-  max-width: 1300px;
+  max-width: 1700px;
   margin-bottom: 200px;
  
 }
 
 .project-page h1 {
-  font-family: "roc-grotesk", sans-serif;
+  font-family: var(--brand-font-body), sans-serif;
   font-weight: 600;
   font-style: normal;
   font-size: 3em;
   line-height: 0.8em;
   display: block;
   margin-bottom: 0;
-  color: var(--shell);
+  color: black;
   padding: 0;
-  display: none;
+  /* display: none; */
 }
 
 figcaption {
@@ -595,7 +563,22 @@ figcaption {
 .project-tile {
   padding: 0;
   margin: 0;
-  /* align-self: center; */
+  align-self: center;
+
+}
+
+.tile-text {
+  align-self: flex-start;
+}
+
+.project-tile:nth-child(2) {
+
+  margin-top: 100px;
+}
+
+.project-tile:nth-child(n+3) {
+
+  margin-bottom: 100px;
 }
 
 .project-tile img {
@@ -606,13 +589,13 @@ figcaption {
 
 
 
-.project-tile:nth-child(odd) {
-  grid-column: 1/3;  /* Applies to 1st, 3rd, 5th, 7th, 9th, etc. */
+.project-tile {
+  grid-column: span 4;  /* Applies to 1st, 3rd, 5th, 7th, 9th, etc. */
 }
 
-.project-tile:nth-child(even) {
-  grid-column: 3/7;  /* Applies to 2nd, 4th, 6th, 8th, 10th, etc. */
-}
+/* .project-tile:nth-child(even) {
+  grid-column: span 2;  /* Applies to 2nd, 4th, 6th, 8th, 10th, etc. */
+/* }
 
 .project-tile:nth-child(1) {
   grid-column: span 6;
@@ -620,7 +603,7 @@ figcaption {
 
 .project-tile:nth-child(2) {
   grid-column: span 6;
-}
+} */ */
 
 .project-page-light {
  width: 100wv;
@@ -642,8 +625,121 @@ figcaption {
   grid-column: span 6;
 }
 
+.project-tile:nth-child(1) {
+  grid-column: span 1;
+}
+
+.project-tile:nth-child(2) {
+  grid-column: span 3;
+}
+
+.project-tile:nth-child(3) {
+  grid-column: span 1;
+}
+
+.project-tile:nth-child(4) {
+  grid-column: span 2;
+}
+
+.project-mg .project-tile:nth-child(5) {
+  grid-column: span 1;
+}
+
+.project-mg .project-tile:nth-child(6) {
+  grid-column: span 1;
+}
+
+.project-mg .project-tile:nth-child(7) {
+  grid-column: span 3;
+}
+
+.project-mg .project-tile:nth-child(8) {
+  grid-column: 2/4;
+}
+
+.project-mg .project-tile:nth-child(9) {
+  grid-column: 1/4;
+}
+
+.project-mg .project-tile:nth-child(10) {
+  grid-column: 2/5;
+}
+
+.project-smi .project-tile:nth-child(5) {
+  grid-column: 1/5;
+}
+
+.project-smi .project-tile:nth-child(6) {
+  grid-column: 1/2;
+}
+
+.project-smi .project-tile:nth-child(7) {
+  grid-column: 2/5;
+}
+
+.project-smi .project-tile:nth-child(8) {
+  grid-column: 1/3;
+}
+
+.project-smi .project-tile:nth-child(9) {
+  grid-column: 3/4;
+}
+
+.project-smi .project-tile:nth-child(11) {
+  grid-column: 2/5;
+}
+
+.project-smi .project-tile:nth-child(10) {
+  grid-column: 1/2;
+}
+
+.project-annu .project-tile:nth-child(5) {
+  grid-column: span 3;
+}
+
+.project-annu .project-tile:nth-child(n+6) {
+  grid-column: span 2;
+}
 
 
+
+
+
+
+
+
+.intro-text {
+  font-family: var(--brand-font-body) !important;
+ 
+  line-height: 1.1em;
+}
+
+.light-bg p {
+  color: black;
+}
+
+.experience {
+  margin-bottom: 30px;
+}
+
+/* about */
+.roll {
+  font-family: var(--brand-font-body), sans-serif;
+ 
+  font-size: 1em !important;
+  line-height: .5em;
+}
+
+.company {
+ 
+
+  font-size: .9em !important;
+}
+
+.about-rubrik {
+  text-transform: uppercase;
+
+}
 
 
 /* Mobile phones (portrait) */
@@ -695,6 +791,7 @@ figcaption {
 
   .project-tile {
     grid-column: span 1; /* Ensure project tiles span full width */
+   
   }
 
   .tile-container {
@@ -723,7 +820,7 @@ figcaption {
   
     list-style: none;
     font-size: 1em;
-    font-family: "roc-grotesk", sans-serif;;
+    font-family:var(--brand-font-body), sans-serif;
     color: var(--shell);
   
     
