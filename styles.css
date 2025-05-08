@@ -166,7 +166,8 @@ nav ul li a {
 }
 
 .light-bg nav a {
-  color: var(--blue)
+  color: var(--blue);
+  color: black;
 }
 
 
@@ -389,11 +390,11 @@ margin-bottom: 10px;
 
 
 
-.about h1 {
+.about , .om h1 {
   /* color: black;
   margin-left: -10px;
   font-weight: 800; */
-  color: var(--shell)
+  color: var(--shell) !important
 }
 
 
@@ -739,7 +740,6 @@ figcaption {
 
 
 
-
 .intro-text {
   font-family: var(--brand-font-body) !important;
  
@@ -755,11 +755,37 @@ figcaption {
 }
 
 /* about */
+
+.om .info {
+
+
+  font-size: 1em;
+
+ 
+  align-self: start !important;
+  justify-self: start !important;
+margin-left: 0;
+margin-top: 20px;
+
+}
+
+.om h1 {
+  margin-bottom: 20px;
+}
+
+.om .project-tile:nth-child(5) {
+  grid-column: 3;
+}
+
+.om .project-tile:nth-child(6) {
+  grid-column: 4;
+}
+
 .roll {
   font-family: var(--brand-font-body), sans-serif;
  
   font-size: 1em !important;
-  line-height: .5em;
+  line-height: 1.2em;
 }
 
 .company {
