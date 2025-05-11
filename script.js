@@ -1,43 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Insert navigation into the page
   const navbarHTML = `
-    <nav>
-      <ul>
-        <li class="nav-link"><a href="#cases">tidigare projekt</a></li>
-        <li class="nav-link"><a href="#services">tjänster</a></li>
-        <li class="nav-link"><a href="#about">om</a></li>
-        <li class="nav-link"><a href="#contact">kontakt</a></li>
-      </ul>
-    </nav>
+  <ul>
+  <li class="nav-link"><a href="index.html">projekt</a></li>
+
+  <li class="nav-link"><a href="om.html">om</a></li>
+  
+</ul>
   `;
-  const navbarHTML2 = `
-    <nav>
-      <ul>
-        <li class="nav-link"><a href="index.html#cases">tidigare projekt</a></li>
-        <li class="nav-link"><a href="index.html#services">tjänster</a></li>
-        <li class="nav-link"><a href="index.html#about">om</a></li>
-        <li class="nav-link"><a href="index.html#contact">kontakt</a></li>
-      </ul>
-    </nav>
-  `;
+
 
   // Insert correct navbar if container exists
   if (document.getElementById("navbar-container")) {
     document.getElementById("navbar-container").innerHTML = navbarHTML;
   }
-  if (document.getElementById("navbar-container-2")) {
-    document.getElementById("navbar-container-2").innerHTML = navbarHTML2;
-  }
+  
 
   // Insert footer
   const footerHTML = `
   
+  <div class="footer-container">
+  
+  <div class="footer-left">
+  <img src="images/initials.svg">
+   </div>
+
+   <div class="footer-right">
+   <a class="footer-icon" href="https://www.linkedin.com/in/malin-bengtsson-69816b146/" target="_blank"><img src="images/inbug-white.png"></a>
+    <p> <a href="mailto:malinxbengtsson@hotmail.com">malinxbengtsson@hotmail.com</a></p>
+     <p>&copy; 2025 Malin Bengtsson</p>
+   
+  </div>
+</div>
+
   
   
   `;
   if (document.getElementById("footer-container")) {
     document.getElementById("footer-container").innerHTML = footerHTML;
-  }
+  } ;
+
+
+});
+  
+
+
 
   // Wait for navigation to be added before selecting elements
 //   const sections = document.querySelectorAll("section:not(.intro)");
