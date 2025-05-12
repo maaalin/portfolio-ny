@@ -144,12 +144,6 @@ footer img {
 
 
 
-#media {
-  font-family: "ivypresto-headline", serif;
-  font-weight: 100;
-  font-style: italic;
-  font-size: 0.9em;
-}
 
 
 .top-bar {
@@ -974,6 +968,9 @@ figcaption {
 @media (max-width: 1080px) {
 
 
+  section {
+    margin: 100px 0px;
+  }
 
   .cases,
   .about,
@@ -982,25 +979,30 @@ figcaption {
     flex-direction: column;
   }
 
-  .contact {
-    /* font-size: 1.5em; */
+  .nav-link {
+
+    padding-left: 5px;
+  }
+  
+  nav ul li {
+    margin: auto 0;
   }
 
-  .tile-container {
-    flex-direction: column;
-    /* Stack tiles vertically */
+  .project-page {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    margin: 0;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    max-width: 1700px;
+    margin-bottom: 100px;
   }
 
-  .tile {
-    flex: 1 1 100%;
-    /* Make tiles take up full width */
-    max-width: 100%;
-    padding: 20px;
-    /* Adjust padding */
-  }
 
   .nav-link a {
-    font-size: 1.5em;
+    font-size: 1em;
     /* Reduce font size for navigation links */
   }
 
@@ -1020,6 +1022,19 @@ figcaption {
 
   }
 
+  .intro-tile h1 {
+    font-size: 1em;
+  }
+
+  .intro {
+    margin: 150px 10px 100px 10px;
+  }
+  
+
+  .info {
+    font-size: 1em;
+  }
+/* 
   .om .project-tile:nth-child(n+1) {
     grid-column: span 2;
   }
@@ -1032,13 +1047,7 @@ figcaption {
     grid-column: 4;
   }
 
-  .project-tile:nth-child(4) {
-    grid-column: span 3;
-  }
 
-  .smi .project-tile:nth-child(n+6) {
-    grid-column: span 2;
-  }
 
   .mg .project-tile:nth-child(n+5) {
     grid-column: span 4;
@@ -1110,27 +1119,56 @@ figcaption {
 
   .thesis .project-tile:nth-child(13) {
     grid-column: span 3;
+  } */
+
+  
+  .smi .project-tile:nth-child(6) {
+    grid-row: 6;
+  }
+
+    
+  .smi .project-tile:nth-child(10) {
+    grid-row: 11;
+  }
+
+    
+  .bgb .project-tile:nth-child(8) {
+    grid-row: 8;
+  }
+
+  .shapes .project-tile:nth-child(8) {
+    grid-row: 8;
+  }
+
+  .sot .project-tile:nth-child(12) {
+    grid-row: 12;
+  }
+
+  .thesis .project-tile:nth-child(12) {
+    grid-row: 12;
   }
 
 
+
+  .project-tile:nth-child(n+1) {
+    grid-column: span 4 !important;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .empty-tile {
+    display: none;
+  }
 
   .top-bar {
     padding: 10px;
     /* Adjust padding for top bar */
   }
 
-
-
-  .project-tile {
-    grid-column: span 1;
-    /* Ensure project tiles span full width */
-
+  .project-tile h1 {
+    font-size: 1.5em;
   }
 
-  .tile-container {
-    gap: 15px;
-    /* Reduce gap between tiles */
-  }
 
   .top-bar {
 
@@ -1161,15 +1199,6 @@ figcaption {
 
   }
 
-  nav ul li {
-    display: inline-block;
-    vertical-align: middle;
-    margin: auto 10px;
-
-
-
-  }
-}
 
 /* MEDIA 800PX */
 @media (max-width: 800px) {
@@ -1183,7 +1212,7 @@ figcaption {
   }
 
 
-  .intro-tile h1 {}
+
 
 
   .footer-container {
@@ -1223,17 +1252,6 @@ figcaption {
 
 
 
-
-  .tile-container {
-    gap: 20px;
-    /* Adjust gap */
-  }
-
-  .tile {
-    flex: 1 1 calc(50% - 20px);
-    /* Two tiles per row */
-    max-width: calc(50% - 20px);
-  }
 
 
 }
