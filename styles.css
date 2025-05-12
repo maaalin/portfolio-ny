@@ -996,14 +996,14 @@ figcaption {
     margin: 0;
     padding: 30px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 100px;
     max-width: 1700px;
     margin-bottom: 100px;
   }
 
 
   .nav-link a {
-    font-size: 1.2em;
+    font-size: 1em;
     /* Reduce font size for navigation links */
   }
 
