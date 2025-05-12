@@ -990,7 +990,7 @@ figcaption {
 
     padding-left: 5px;
   }
-  
+
   nav ul li {
     margin: auto 0;
   }
@@ -1036,12 +1036,13 @@ figcaption {
   .intro {
     margin: 150px 10px 100px 10px;
   }
-  
+
 
   .info {
     font-size: 1em;
   }
-/* 
+
+  /* 
   .om .project-tile:nth-child(n+1) {
     grid-column: span 2;
   }
@@ -1128,20 +1129,18 @@ figcaption {
     grid-column: span 3;
   } */
 
-  
+
   .smi .project-tile:nth-child(6) {
     grid-row: 6;
   }
 
-    
+
   .smi .project-tile:nth-child(10) {
     grid-row: 11;
   }
 
-    
-  .bgb .project-tile:nth-child(8) {
-    grid-row: 8;
-  }
+
+
 
   .shapes .project-tile:nth-child(8) {
     grid-row: 8;
@@ -1207,58 +1206,58 @@ figcaption {
   }
 
 
-/* MEDIA 800PX */
-@media (max-width: 800px) {
-  .nav-link {
-    font-size: 1.2em;
+  /* MEDIA 800PX */
+  @media (max-width: 800px) {
+    .nav-link {
+      font-size: 1.2em;
+    }
+
+    .banner-small,
+    .banner-small-project {
+      max-width: 80%;
+    }
+
+
+
+
+
+    .footer-container {
+      flex-direction: column;
+      justify-content: flex-end;
+
+    }
+
+
+
+    footer img {
+      max-width: unset;
+      width: 250px;
+      margin: auto;
+    }
+
+    .footer-left {
+      align-self: flex-end;
+    }
+
+    .footer-right {
+      align-self: flex-end;
+      margin-top: 10px;
+    }
+
+    .quintet {
+      flex-direction: column;
+    }
+
+    .om .project-tile:nth-child(n+1) {
+      grid-column: span 4;
+    }
+
+    .om .project-tile:nth-child(n+3) {
+      grid-column: span 2;
+    }
+
+
+
+
+
   }
-
-  .banner-small,
-  .banner-small-project {
-    max-width: 80%;
-  }
-
-
-
-
-
-  .footer-container {
-    flex-direction: column;
-    justify-content: flex-end;
-
-  }
-
-
-
-  footer img {
-    max-width: unset;
-    width: 250px;
-    margin: auto;
-  }
-
-  .footer-left {
-    align-self: flex-end;
-  }
-
-  .footer-right {
-    align-self: flex-end;
-    margin-top: 10px;
-  }
-
-  .quintet {
-    flex-direction: column;
-  }
-
-  .om .project-tile:nth-child(n+1) {
-    grid-column: span 4;
-  }
-
-  .om .project-tile:nth-child(n+3) {
-    grid-column: span 2;
-  }
-
-
-
-
-
-}
