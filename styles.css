@@ -819,7 +819,27 @@ figcaption {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
 }
+
+.trio
+{
+   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.duo
+{
+   display: grid;
+  grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+
 
 /* SMI */
 .smi h1 {
@@ -1001,6 +1021,22 @@ figcaption {
     margin-bottom: 100px;
   }
 
+  .quintet {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+
+}
+
+.trio, .duo
+{
+   display: grid;
+  grid-template-columns: 1fr;
+    gap: 10px;
+}
 
   .nav-link a {
     font-size: 1em;
