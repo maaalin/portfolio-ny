@@ -689,9 +689,48 @@ figcaption {
 }
 
 /* cove */
-.cove .project-tile:nth-child(n+5) {
+.cove .project-tile:nth-child(5) {
+  grid-column: 1;
+}
+
+.cove .project-tile:nth-child(6) {
+  grid-column: span 3;
+}
+
+.cove .project-tile:nth-child(7) {
+  grid-column: span 3;
+}
+
+.cove .project-tile:nth-child(8) {
   grid-column: span 1;
 }
+
+.cove .project-tile:nth-child(9) {
+  grid-column: span 3;
+}
+
+.cove .project-tile:nth-child(10) {
+  grid-column: span 1;
+}
+.cove .project-tile:nth-child(11) {
+  grid-column: span 4;
+}
+
+.cove .project-tile:nth-child(12) {
+  grid-column: span 3;
+}
+
+.cove .project-tile:nth-child(13) {
+  grid-column: span 1;
+}
+
+
+.cove .project-tile:nth-child(15) {
+  grid-column: span 4;
+}
+
+
+
 
 
 /* spirit of tasmania */
