@@ -30,13 +30,13 @@ body {
 
 
 a {
-  color: var(--orange);
+  color: var(--blue);
   text-decoration: none;
   transition: color .3s;
 }
 
 a:hover {
-  color: var(--shell);
+  color: var(--orange);
 }
 
 .contact-link {
@@ -289,7 +289,7 @@ section h1 {
 
 
 
-.cases,
+
 .about,
 .contact {
   display: grid;
@@ -299,6 +299,14 @@ section h1 {
 
 }
 
+.cases {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 350px;
+}
+
+
+
 
 
 .case-tile,
@@ -307,6 +315,7 @@ section h1 {
   transition: transform .3s, filter .3s;
   /* filter: grayscale(100%) */
 }
+
 
 .case-tile:hover {
   transform: scale(0.98);
@@ -324,6 +333,8 @@ section h1 {
 
 
 }
+
+
 
 .text-overlay {
   position: absolute;
@@ -354,11 +365,13 @@ section h1 {
 
 
 
-
+.mobile-only-text {
+  display: none;
+}
 
 .case-tile:nth-child(1) {
-  grid-column: 1/3;
-  grid-row: 1/3;
+  grid-column: span 2;
+  grid-row: span 2;
 
 }
 
@@ -377,13 +390,7 @@ section h1 {
 
 }
 
-.case-tile:nth-child(8) {
-  grid-column: 3/5;
-  grid-row: 3/5;
-
-}
-
-.case-tile:nth-child(7) {
+.case-tile:nth-child(5) {
   grid-column: span 2;
 
 }
@@ -393,10 +400,22 @@ section h1 {
 
 }
 
-.case-tile:nth-child(5) {
+.case-tile:nth-child(7) {
   grid-column: span 1;
 
 }
+
+
+
+
+.case-tile:nth-child(8) {
+  grid-column: 3/5;
+  grid-row: 3/5;
+
+}
+
+
+
 
 
 
@@ -706,14 +725,15 @@ figcaption {
 }
 
 .cove .project-tile:nth-child(9) {
-  grid-column: span 3;
+  grid-column: span 4;
 }
 
 .cove .project-tile:nth-child(10) {
-  grid-column: span 1;
-}
-.cove .project-tile:nth-child(11) {
   grid-column: span 4;
+}
+
+.cove .project-tile:nth-child(11) {
+  grid-column: span 1;
 }
 
 .cove .project-tile:nth-child(12) {
@@ -721,14 +741,36 @@ figcaption {
 }
 
 .cove .project-tile:nth-child(13) {
-  grid-column: span 1;
+  grid-column: 1/4;
+}
+
+.cove .project-tile:nth-child(14) {
+  grid-column: 2/5;
 }
 
 
 .cove .project-tile:nth-child(15) {
-  grid-column: span 4;
+  grid-column: 1/4;
 }
 
+.cove .project-tile:nth-child(16) {
+  grid-column: span 2;
+}
+
+.cove .project-tile:nth-child(17) {
+  grid-column: span 2;
+}
+
+
+
+.cove .project-tile:nth-child(n+18):nth-child(-n+30):nth-child(even) {
+  grid-column: span 1;
+
+}
+
+.cove .project-tile:nth-child(n+19):nth-child(-n+30):nth-child(odd) {
+  grid-column: span 3;
+}
 
 
 
@@ -1041,6 +1083,14 @@ figcaption {
     margin: 100px 0px;
   }
 
+  .mobile-only-text {
+    display: unset;
+  }
+
+
+  .desktop-only-text {
+    display: none;
+  }
 
   .cases,
   .about,
@@ -1109,11 +1159,11 @@ figcaption {
   }
 
   .intro-tile h1 {
-    font-size: 1em;
+    font-size: 2em;
   }
 
   .intro {
-    margin: 150px 10px 100px 10px;
+    margin: 180px 10px 100px 10px;
   }
 
 
@@ -1218,6 +1268,32 @@ figcaption {
     grid-row: 11;
   }
 
+  .cove .project-tile:nth-child(11) {
+    grid-row: 11;
+  }
+
+  .cove .project-tile:nth-child(20) {
+
+    grid-row: 20;
+  }
+
+  .cove .project-tile:nth-child(22) {
+
+    grid-row: 22;
+  }
+
+  .cove .project-tile:nth-child(24) {
+
+    grid-row: 24;
+  }
+
+  .cove .project-tile:nth-child(26) {
+
+    grid-row: 26;
+  }
+
+
+
 
 
 
@@ -1232,6 +1308,12 @@ figcaption {
   .thesis .project-tile:nth-child(12) {
     grid-row: 12;
   }
+
+
+
+
+
+
 
 
 
@@ -1276,7 +1358,7 @@ figcaption {
   nav ul {
 
     list-style: none;
-    font-size: 1em;
+    font-size: 1.3em;
     font-family: var(--brand-font-body), sans-serif;
     color: var(--shell);
 
