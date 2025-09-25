@@ -896,6 +896,18 @@ figcaption {
   grid-column: span 1;
 }
 
+/* BODIES */
+.bodies .project-tile:nth-child(n+5) {
+  grid-column: span 4;
+}
+
+.bodies .project-tile:nth-child(odd):nth-child(n+7) {
+  grid-column: span 3;
+}
+
+.bodies .project-tile:nth-child(even):nth-child(n+7) {
+  grid-column: span 1;
+}
 
 /* BLANDAT */
 .blandat .project-tile:nth-child(5) {
@@ -941,6 +953,10 @@ figcaption {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
+}
+
+.trio video {
+  max-width: 100%;
 }
 
 .duo {
