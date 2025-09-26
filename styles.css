@@ -955,7 +955,8 @@ figcaption {
   gap: 10px;
 }
 
-.trio video {
+.trio video,
+.duo video {
   max-width: 100%;
 }
 
