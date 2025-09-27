@@ -1089,14 +1089,26 @@ figcaption {
   grid-column: 1/4;
 }
 
+.shapes .project-tile:nth-child(11) {
+  grid-column: 4;
+}
+
 .shapes .project-tile:nth-child(12) {
   grid-column: 2/5;
+}
+
+.shapes .project-tile:nth-child(13) {
+  grid-column: span 4;
+}
+
+.shapes .project-tile:nth-child(14) {
+  grid-column: span 3;
 }
 
 .intro-text {
   font-family: var(--brand-font-body) !important;
 
-  line-height: 1.1em;
+  line-height: 1.2em;
 
 }
 
@@ -1138,7 +1150,8 @@ figcaption {
 
 .om .project-tile:nth-child(2) {
   grid-column: span 2;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+
 }
 
 .om .project-tile:nth-child(3) {
