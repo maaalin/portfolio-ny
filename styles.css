@@ -393,12 +393,12 @@ section h1 {
 }
 
 .case-tile:nth-child(4) {
-  grid-area: d;
+  grid-area: e;
 
 }
 
 .case-tile:nth-child(5) {
-  grid-area: e;
+  grid-area: h;
 
 }
 
@@ -412,7 +412,7 @@ section h1 {
 }
 
 .case-tile:nth-child(8) {
-  grid-area: h;
+  grid-area: d;
 
 }
 
@@ -967,6 +967,14 @@ figcaption {
 }
 
 
+.duo-stacked {
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+
+
+
 
 /* SMI */
 .smi h1 {
@@ -1015,7 +1023,14 @@ figcaption {
   grid-column: span 1;
 }
 
-/* NITEDALS */
+/* PRINT */
+.print .project-tile:nth-child(odd):nth-child(n+5) {
+  grid-column: span 3;
+}
+
+.print .project-tile:nth-child(even):nth-child(n+5) {
+  grid-column: span 1;
+}
 
 /* nitedals */
 
@@ -1237,7 +1252,8 @@ figcaption {
   }
 
   .trio,
-  .duo {
+  .duo,
+  .duo-stacked {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
