@@ -710,10 +710,10 @@ figcaption {
 }
 
 .mg .project-tile:nth-child(7) {
-  grid-column: span 2;
+  grid-column: span 4;
 }
 
-.mg .project-tile:nth-child(8) {
+.mg .project-tile:nth-child(n+8) {
   grid-column: span 2;
 }
 
@@ -743,25 +743,25 @@ figcaption {
 }
 
 .cove .project-tile:nth-child(11) {
-  grid-column: span 1;
+  grid-column: span 4;
 }
 
 .cove .project-tile:nth-child(12) {
-  grid-column: span 3;
+  grid-column: span 1;
 }
 
 .cove .project-tile:nth-child(13) {
-  grid-column: 1/4;
+  grid-column: span 3;
 }
 
 .cove .project-tile:nth-child(14) {
+  grid-column: 1/4;
+}
+
+.cove .project-tile:nth-child(15) {
   grid-column: 2/5;
 }
 
-
-.cove .project-tile:nth-child(15) {
-  grid-column: 1/4;
-}
 
 .cove .project-tile:nth-child(16) {
   grid-column: span 2;
@@ -769,7 +769,10 @@ figcaption {
 
 .cove .project-tile:nth-child(17) {
   grid-column: span 2;
+
 }
+
+
 
 
 
@@ -932,9 +935,8 @@ figcaption {
   align-items: center;
 }
 
-.trio video,
-.duo video,
-.blandat video {
+
+video {
   max-width: 100%;
 }
 
