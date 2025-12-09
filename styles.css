@@ -938,6 +938,7 @@ figcaption {
 
 video {
   max-width: 100%;
+  min-width: 100%;
 }
 
 .duo {
@@ -995,6 +996,11 @@ video {
 }
 
 /* SMI ADS */
+
+
+
+
+
 .smi-ads .project-tile:nth-child(odd):nth-child(n+5) {
   grid-column: span 3;
 }
@@ -1002,6 +1008,8 @@ video {
 .smi-ads .project-tile:nth-child(even):nth-child(n+5) {
   grid-column: span 1;
 }
+
+
 
 /* PRINT */
 .print .project-tile:nth-child(odd):nth-child(n+5) {
@@ -1103,7 +1111,7 @@ video {
 .intro-text {
   font-family: var(--brand-font-body) !important;
 
-  line-height: 1.2em;
+  line-height: 1.3em;
 
 }
 
