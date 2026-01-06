@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("navbar-container")) {
     document.getElementById("navbar-container").innerHTML = navbarHTML;
   }
-  
+
 
   // Insert footer
   const footerHTML = `
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
    <div class="footer-right">
    <a class="footer-icon" href="https://www.linkedin.com/in/malin-bengtsson-69816b146/" target="_blank"><img src="images/inbug-white.png"></a>
     <p> <a href="mailto:malinxbengtsson@hotmail.com">malinxbengtsson@hotmail.com</a></p>
-     <p>&copy; 2025 Malin Bengtsson</p>
+     <p>&copy; 2026 Malin Bengtsson</p>
    
   </div>
 </div>
@@ -38,11 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
   if (document.getElementById("footer-container")) {
     document.getElementById("footer-container").innerHTML = footerHTML;
-  } ;
+  };
 
 
 });
-  
+
 
 
 
