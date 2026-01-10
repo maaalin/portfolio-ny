@@ -1009,6 +1009,21 @@ video {
   grid-column: span 1;
 }
 
+/* FREDAGSTUREN */
+
+.fredagsturen .project-tile:nth-child(even):nth-child(5) {
+  grid-column: span 4;
+}
+
+.fredagsturen .project-tile:nth-child(even):nth-child(n+6) {
+  grid-column: span 3;
+}
+
+.fredagsturen .project-tile:nth-child(odd):nth-child(n+6) {
+  grid-column: span 1;
+}
+
+
 
 
 /* PRINT */
