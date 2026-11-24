@@ -1,1 +1,4 @@
-#images/en-inre-dialog.mp4
+.DS_Store
+node_modules/
+backup-repo.git/
+*.log
